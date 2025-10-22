@@ -26,11 +26,11 @@ import {
 } from './src/utils/calculations';
 import { commonStyles } from './src/styles/theme';
 
-const LoanCalculator = () => {
+const LoanCalculator: React.FC = () => {
   // State management
-  const [amount, setAmount] = useState(SLIDER_CONFIG.AMOUNT.DEFAULT);
-  const [years, setYears] = useState(SLIDER_CONFIG.YEARS.DEFAULT);
-  const [monthlyPayment, setMonthlyPayment] = useState(0);
+  const [amount, setAmount] = useState<number>(SLIDER_CONFIG.AMOUNT.DEFAULT);
+  const [years, setYears] = useState<number>(SLIDER_CONFIG.YEARS.DEFAULT);
+  const [monthlyPayment, setMonthlyPayment] = useState<number>(0);
 
   // Calculate interest rate based on amount
   const interestRate = calculateInterestRate(amount);
@@ -42,7 +42,7 @@ const LoanCalculator = () => {
   }, [amount, years, interestRate]);
 
   // Handler for getting a quote
-  const handleGetQuote = () => {
+  const handleGetQuote = (): void => {
     // TODO: Implement quote request logic
     console.log('Get quote clicked', {
       amount,
@@ -53,12 +53,12 @@ const LoanCalculator = () => {
   };
 
   // Handler for amount change
-  const handleAmountChange = (value) => {
+  const handleAmountChange = (value: number): void => {
     setAmount(Number(value));
   };
 
   // Handler for years change
-  const handleYearsChange = (value) => {
+  const handleYearsChange = (value: number): void => {
     setYears(Number(value));
   };
 
@@ -102,3 +102,4 @@ const LoanCalculator = () => {
 };
 
 export default LoanCalculator;
+

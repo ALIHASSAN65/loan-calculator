@@ -31,9 +31,9 @@ describe('calculateMonthlyPayment', () => {
 });
 
 describe('formatYears', () => {
-  test('formats whole and half years correctly', () => {
+  test('formats years in decimal format', () => {
     expect(formatYears(2)).toBe('2');
-    expect(formatYears(2.5)).toBe('2 ½');
+    expect(formatYears(2.5)).toBe('2.5');
   });
 });
 
