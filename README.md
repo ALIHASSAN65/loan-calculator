@@ -4,17 +4,51 @@ A React Native loan calculator application that calculates monthly repayments wi
 
 ---
 
-## Screenshots
+## Demo
+
+### iOS Version
 
 <div align="center">
-  <img src="./screenshots/ios.png" alt="iOS Screenshot" width="300" />
-  <p><em>iOS Version</em></p>
+  <table>
+    <tr>
+      <td align="center">
+        <img src="./demos/ios.png" alt="iOS Screenshot" width="250" />
+        <br />
+        <em>Screenshot</em>
+      </td>
+      <td align="center">
+        
+https://github.com/user-attachments/assets/your-ios-video.mp4
+
+<br />
+        <em>Video Demo</em>
+      </td>
+    </tr>
+  </table>
 </div>
 
+### Android Version
+
 <div align="center">
-  <img src="./screenshots/android.png" alt="Android Screenshot" width="300" />
-  <p><em>Android Version</em></p>
+  <table>
+    <tr>
+      <td align="center">
+        <img src="./demos/android.png" alt="Android Screenshot" width="250" />
+        <br />
+        <em>Screenshot</em>
+      </td>
+      <td align="center">
+        
+https://github.com/user-attachments/assets/your-android-video.mp4
+
+<br />
+        <em>Video Demo</em>
+      </td>
+    </tr>
+  </table>
 </div>
+
+> **Note:** To add demo videos, record your app (see `demos/README.md`), then edit this README on GitHub and drag/drop your video files where the placeholder URLs are shown above.
 
 ---
 
