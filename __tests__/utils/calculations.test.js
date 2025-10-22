@@ -5,9 +5,41 @@
 
 import {
   calculateMonthlyPayment,
+  calculateInterestRate,
   formatYears,
   formatCurrency,
 } from '../../src/utils/calculations';
+
+describe('calculateInterestRate', () => {
+  test('returns 5% for amounts £1,000-£4,999', () => {
+    expect(calculateInterestRate(1000)).toBe(5);
+    expect(calculateInterestRate(2500)).toBe(5);
+    expect(calculateInterestRate(4999)).toBe(5);
+  });
+
+  test('returns 10% for amounts £5,000-£9,999', () => {
+    expect(calculateInterestRate(5000)).toBe(10);
+    expect(calculateInterestRate(7500)).toBe(10);
+    expect(calculateInterestRate(9999)).toBe(10);
+  });
+
+  test('returns 15% for amounts £10,000-£14,999', () => {
+    expect(calculateInterestRate(10000)).toBe(15);
+    expect(calculateInterestRate(12000)).toBe(15);
+    expect(calculateInterestRate(14999)).toBe(15);
+  });
+
+  test('returns 20% for amounts £15,000-£20,000', () => {
+    expect(calculateInterestRate(15000)).toBe(20);
+    expect(calculateInterestRate(17500)).toBe(20);
+    expect(calculateInterestRate(20000)).toBe(20);
+  });
+
+  test('returns default 10% for edge cases', () => {
+    expect(calculateInterestRate(999)).toBe(10);
+    expect(calculateInterestRate(20001)).toBe(10);
+  });
+});
 
 describe('calculateMonthlyPayment', () => {
   test('calculates correct monthly payment for standard loan', () => {

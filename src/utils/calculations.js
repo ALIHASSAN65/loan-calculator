@@ -5,6 +5,19 @@
 import { CURRENCY } from '../constants';
 
 /**
+ * Calculate interest rate based on loan amount
+ * @param {number} amount - Loan amount
+ * @returns {number} Interest rate percentage
+ */
+export const calculateInterestRate = (amount) => {
+  if (amount >= 1000 && amount <= 4999) return 5;
+  if (amount >= 5000 && amount <= 9999) return 10;
+  if (amount >= 10000 && amount <= 14999) return 15;
+  if (amount >= 15000 && amount <= 20000) return 20;
+  return 10; // Default fallback
+};
+
+/**
  * Calculate monthly loan payment using amortization formula
  * @param {number} principal - Loan amount
  * @param {number} annualRate - Annual interest rate (as percentage)

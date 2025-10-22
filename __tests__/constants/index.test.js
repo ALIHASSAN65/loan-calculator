@@ -7,7 +7,7 @@ import {
   LABELS,
   CURRENCY,
   SLIDER_CONFIG,
-  INTEREST_RATE_CONFIG,
+  INTEREST_RATE_TIERS,
   COLORS,
   GRADIENT,
   LAYOUT,
@@ -71,9 +71,42 @@ describe('Constants', () => {
     });
   });
 
-  describe('INTEREST_RATE_CONFIG', () => {
-    test('has default interest rate', () => {
-      expect(INTEREST_RATE_CONFIG.DEFAULT).toBe(10);
+  describe('INTEREST_RATE_TIERS', () => {
+    test('has all tiers defined', () => {
+      expect(INTEREST_RATE_TIERS.TIER_1).toBeDefined();
+      expect(INTEREST_RATE_TIERS.TIER_2).toBeDefined();
+      expect(INTEREST_RATE_TIERS.TIER_3).toBeDefined();
+      expect(INTEREST_RATE_TIERS.TIER_4).toBeDefined();
+    });
+
+    test('tier 1: £1,000-£4,999 at 5%', () => {
+      expect(INTEREST_RATE_TIERS.TIER_1.MIN).toBe(1000);
+      expect(INTEREST_RATE_TIERS.TIER_1.MAX).toBe(4999);
+      expect(INTEREST_RATE_TIERS.TIER_1.RATE).toBe(5);
+    });
+
+    test('tier 2: £5,000-£9,999 at 10%', () => {
+      expect(INTEREST_RATE_TIERS.TIER_2.MIN).toBe(5000);
+      expect(INTEREST_RATE_TIERS.TIER_2.MAX).toBe(9999);
+      expect(INTEREST_RATE_TIERS.TIER_2.RATE).toBe(10);
+    });
+
+    test('tier 3: £10,000-£14,999 at 15%', () => {
+      expect(INTEREST_RATE_TIERS.TIER_3.MIN).toBe(10000);
+      expect(INTEREST_RATE_TIERS.TIER_3.MAX).toBe(14999);
+      expect(INTEREST_RATE_TIERS.TIER_3.RATE).toBe(15);
+    });
+
+    test('tier 4: £15,000-£20,000 at 20%', () => {
+      expect(INTEREST_RATE_TIERS.TIER_4.MIN).toBe(15000);
+      expect(INTEREST_RATE_TIERS.TIER_4.MAX).toBe(20000);
+      expect(INTEREST_RATE_TIERS.TIER_4.RATE).toBe(20);
+    });
+
+    test('tiers have no gaps', () => {
+      expect(INTEREST_RATE_TIERS.TIER_2.MIN).toBe(INTEREST_RATE_TIERS.TIER_1.MAX + 1);
+      expect(INTEREST_RATE_TIERS.TIER_3.MIN).toBe(INTEREST_RATE_TIERS.TIER_2.MAX + 1);
+      expect(INTEREST_RATE_TIERS.TIER_4.MIN).toBe(INTEREST_RATE_TIERS.TIER_3.MAX + 1);
     });
   });
 

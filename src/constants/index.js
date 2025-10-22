@@ -36,9 +36,12 @@ export const SLIDER_CONFIG = {
   },
 };
 
-// Interest Rate Configuration
-export const INTEREST_RATE_CONFIG = {
-  DEFAULT: 10, // Annual interest rate in percentage
+// Interest Rate Configuration (Dynamic based on loan amount)
+export const INTEREST_RATE_TIERS = {
+  TIER_1: { MIN: 1000, MAX: 4999, RATE: 5 },
+  TIER_2: { MIN: 5000, MAX: 9999, RATE: 10 },
+  TIER_3: { MIN: 10000, MAX: 14999, RATE: 15 },
+  TIER_4: { MIN: 15000, MAX: 20000, RATE: 20 },
 };
 
 // Color Palette

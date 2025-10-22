@@ -18,18 +18,22 @@ import {
 // Constants and utilities
 import {
   SLIDER_CONFIG,
-  INTEREST_RATE_CONFIG,
   GRADIENT,
 } from './src/constants';
-import { calculateMonthlyPayment } from './src/utils/calculations';
+import { 
+  calculateMonthlyPayment,
+  calculateInterestRate 
+} from './src/utils/calculations';
 import { commonStyles } from './src/styles/theme';
 
 const LoanCalculator = () => {
   // State management
   const [amount, setAmount] = useState(SLIDER_CONFIG.AMOUNT.DEFAULT);
   const [years, setYears] = useState(SLIDER_CONFIG.YEARS.DEFAULT);
-  const [interestRate] = useState(INTEREST_RATE_CONFIG.DEFAULT);
   const [monthlyPayment, setMonthlyPayment] = useState(0);
+
+  // Calculate interest rate based on amount
+  const interestRate = calculateInterestRate(amount);
 
   // Calculate monthly repayment whenever amount or years changes
   useEffect(() => {
