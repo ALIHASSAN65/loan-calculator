@@ -1,17 +1,16 @@
 # Lendable Loan Calculator
 
-A React Native loan calculator app that calculates monthly repayments based on loan amount, term, and dynamic interest rates.
+A React Native loan calculator that calculates monthly repayments with dynamic interest rates based on loan amount.
 
 ---
 
 ## Features
 
 - **Loan Amount Slider**: £1,000 - £20,000 in £100 increments
-- **Loan Term Slider**: 1 - 5 years in 6-month steps (displays as 2½ years, etc.)
-- **Dynamic Interest Rates**: Automatically adjusts based on loan amount
-- **Monthly Repayment Calculation**: Uses standard amortization formula
-- **Responsive Design**: Works on iOS and Android devices
-- **Production-Grade Code**: Modular components, centralized constants, comprehensive tests
+- **Loan Term Slider**: 1 - 5 years in 6-month steps (displays 2½ years)
+- **Dynamic Interest Rates**: Automatically adjusts based on amount
+- **Monthly Repayment**: Uses standard amortization formula
+- **iOS & Android**: Cross-platform support
 
 ### Interest Rate Tiers
 
@@ -28,63 +27,48 @@ A React Native loan calculator app that calculates monthly repayments based on l
 
 ### Prerequisites
 - Node.js (v20+)
-- npm or yarn
+- Yarn
 - Xcode (for iOS)
 - Android Studio (for Android)
 
 ### Setup
 
-1. **Install dependencies:**
 ```bash
-npm install
-```
+# Install dependencies
+yarn install
 
-2. **iOS Setup** (Mac only):
-```bash
-cd ios
-pod install
-cd ..
+# iOS Setup (Mac only)
+cd ios && pod install && cd ..
 ```
 
 ---
 
 ## Running the App
 
-### Start Metro Bundler
 ```bash
-npm start
-```
+# Start Metro Bundler
+yarn start
 
-### Run on iOS
-```bash
-npm run ios
-```
+# Run on iOS
+yarn ios
 
-### Run on Android
-```bash
-npm run android
+# Run on Android
+yarn android
 ```
 
 ---
 
 ## Running Tests
 
-### Run all tests:
 ```bash
-npm test
+# Run all tests
+yarn test
+
+# Run in watch mode
+yarn test --watch
 ```
 
-### Run tests in watch mode:
-```bash
-npm test -- --watch
-```
-
-### Run with coverage:
-```bash
-npm test -- --coverage
-```
-
-**Test Results:** ✅ 79 tests passing
+**Test Coverage:** 13 tests covering core functionality & components
 
 ---
 
@@ -92,57 +76,63 @@ npm test -- --coverage
 
 ```
 src/
-├── components/           # Reusable UI components
-│   ├── AmountSlider.js   # Loan amount slider
-│   ├── YearsSlider.js    # Loan term slider
-│   ├── ResultBox.js      # Results display
-│   ├── ActionButton.js   # CTA button
-│   └── index.js          # Barrel exports
-├── constants/            # Application constants
-│   └── index.js          # Labels, colors, configs
-├── utils/                # Utility functions
-│   └── calculations.js   # Loan calculations & formatters
-├── styles/               # Theme and styling
-│   └── theme.js          # Centralized styles
-└── assets/               # Static assets
-    └── fonts/            # Custom fonts (OpenSans)
+├── components/           # UI components (TypeScript)
+│   ├── AmountSlider.tsx  # Loan amount selector
+│   ├── YearsSlider.tsx   # Loan term selector
+│   ├── ResultBox.tsx     # Results display
+│   ├── ActionButton.tsx  # CTA button
+│   └── index.js          # Component exports
+├── constants/
+│   └── index.ts          # App constants (TypeScript with interfaces)
+├── utils/
+│   └── calculations.ts   # Loan calculations (TypeScript)
+├── styles/
+│   └── theme.js          # Centralized styling (JavaScript)
+└── assets/
+    └── fonts/            # OpenSans font family
 
-__tests__/                # Test files
-├── components/           # Component tests
-├── utils/                # Utility tests
-├── constants/            # Constants tests
-└── App.test.js           # Integration tests
+__tests__/
+├── utils/
+│   └── calculations.test.js   # Core logic tests (6 tests)
+├── components.test.js          # Component tests (5 tests)
+└── App.test.js                 # Integration tests (3 tests)
 
-App.js                    # Main application component
+App.js                          # Main app component
 ```
 
 ---
 
-## Technical Decisions
+## Technical Implementation
 
-### Architecture
-- **Component-based structure**: Modular, reusable components
-- **Centralized constants**: All labels, colors, and configs in one place
-- **Utility functions**: Pure functions for calculations and formatting
-- **Theme system**: Centralized styling for consistency
+### Loan Calculation Formula
+Standard amortization formula:
+```
+M = P × [r(1 + r)^n] / [(1 + r)^n - 1]
 
-### Calculations
-- **Amortization Formula**: Standard financial formula for monthly payments
-  ```
-  M = P × [r(1 + r)^n] / [(1 + r)^n - 1]
-  where:
+where:
   M = Monthly Payment
   P = Principal (loan amount)
-  r = Monthly interest rate (annual rate ÷ 12 ÷ 100)
+  r = Monthly interest rate (annual ÷ 12 ÷ 100)
   n = Number of payments (years × 12)
-  ```
-- **Dynamic Interest Rates**: Calculated based on loan amount tiers
+```
 
-### Testing
-- **Unit Tests**: All utilities and components tested
-- **Integration Tests**: Full app rendering and functionality
-- **Test Coverage**: 79 tests covering calculations, components, and integration
-- **Mocking**: External dependencies properly mocked for isolated testing
+### Architecture Decisions
+- **Component-based**: Modular, reusable components
+- **TypeScript for core logic**: Type-safe utilities and constants
+- **Centralized constants**: All labels and configs with type definitions
+- **Pure functions**: Typed calculation utilities
+- **Theme system**: Consistent styling throughout
+
+### Dynamic Interest Rates
+Interest rate automatically calculates based on loan amount:
+```javascript
+calculateInterestRate(amount) {
+  if (amount >= 1000 && amount <= 4999) return 5;
+  if (amount >= 5000 && amount <= 9999) return 10;
+  if (amount >= 10000 && amount <= 14999) return 15;
+  if (amount >= 15000 && amount <= 20000) return 20;
+}
+```
 
 ---
 
@@ -152,10 +142,9 @@ App.js                    # Main application component
 - `react`: 19.1.0
 - `react-native`: 0.81.4
 
-### UI Components
-- `react-native-linear-gradient`: ^2.8.3 (Gradient backgrounds)
-- `react-native-sliders`: ^2.0.2 (Interactive sliders)
-- `react-native-safe-area-context`: ^5.5.2 (Notch/safe area handling)
+### UI
+- `react-native-linear-gradient`: ^2.8.3
+- `react-native-sliders`: ^2.0.2
 
 ### Testing
 - `jest`: ^29.6.3
@@ -163,65 +152,45 @@ App.js                    # Main application component
 
 ---
 
-## Development Notes
+## Technology Choices
 
-### Time Spent
-Approximately 4 hours on:
-- Component architecture and implementation (1.5h)
-- Dynamic interest rate logic (0.5h)
-- Comprehensive test suite (1.5h)
-- Code organization and documentation (0.5h)
+- **React Native** with **TypeScript**
+- **TypeScript** used for:
+  - All components (`*.tsx` with typed props and React.FC)
+  - Core utilities (`calculations.ts` with typed functions)
+  - Constants (`index.ts` with interfaces and type exports)
+- **JavaScript** for:
+  - Styling (`theme.js` - no types needed)
+  - Tests (simpler test syntax)
+- **Jest** for testing
+- **Yarn** for package management
 
-### Trade-offs Made
-- **JavaScript over TypeScript**: Faster development for the time constraint
-- **Single theme file**: Simpler for small app, scalable to co-located styles later
-- **No animations**: Focused on functionality and code quality
-- **Basic responsive**: Percentage-based layouts, room for improvement with normalize functions
+Shows TypeScript proficiency while keeping practical complexity.
 
-### Future Improvements
-- Add responsive font scaling for better device support
-- Implement SafeAreaView for notched devices
-- Add animations for slider changes
-- Support landscape orientation
-- Implement dark mode
-- Add accessibility features (screen reader support)
-- Migrate to TypeScript
+---
+
+## Time Spent
+
+Approximately 4 hours:
+- Component architecture (1.5h)
+- Dynamic interest logic (0.5h)
+- Testing (1h)
+- Documentation (1h)
 
 ---
 
 ## Design Compliance
 
-✅ Gradient background matching mockup  
-✅ Card with shadow elevation  
+✅ Gradient background  
+✅ Card with shadow  
 ✅ Two interactive sliders  
-✅ Results display (interest rate & monthly payment)  
-✅ Action button ("Get your quote")  
-✅ OpenSans font family  
-✅ Color scheme matching design  
-✅ Responsive percentage-based layouts  
-
----
-
-## Testing
-
-All tests pass with no console errors:
-
-```
-Test Suites: 7 passed, 7 total
-Tests:       79 passed, 79 total
-Snapshots:   1 passed, 1 total
-```
-
-Test categories:
-- ✅ Interest rate tier calculations (5 tests)
-- ✅ Monthly payment calculations (9 tests)
-- ✅ Formatting utilities (10 tests)
-- ✅ Component rendering (24 tests)
-- ✅ Constants validation (20 tests)
-- ✅ Integration tests (11 tests)
+✅ Results display  
+✅ Action button  
+✅ OpenSans font  
+✅ Matching color scheme  
 
 ---
 
 ## License
 
-MIT License
+MIT

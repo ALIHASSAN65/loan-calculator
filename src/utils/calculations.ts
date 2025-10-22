@@ -6,10 +6,10 @@ import { CURRENCY } from '../constants';
 
 /**
  * Calculate interest rate based on loan amount
- * @param {number} amount - Loan amount
- * @returns {number} Interest rate percentage
+ * @param amount - Loan amount in pounds
+ * @returns Interest rate percentage
  */
-export const calculateInterestRate = (amount) => {
+export const calculateInterestRate = (amount: number): number => {
   if (amount >= 1000 && amount <= 4999) return 5;
   if (amount >= 5000 && amount <= 9999) return 10;
   if (amount >= 10000 && amount <= 14999) return 15;
@@ -19,12 +19,16 @@ export const calculateInterestRate = (amount) => {
 
 /**
  * Calculate monthly loan payment using amortization formula
- * @param {number} principal - Loan amount
- * @param {number} annualRate - Annual interest rate (as percentage)
- * @param {number} years - Loan term in years
- * @returns {number} Monthly payment amount
+ * @param principal - Loan amount
+ * @param annualRate - Annual interest rate (as percentage)
+ * @param years - Loan term in years
+ * @returns Monthly payment amount
  */
-export const calculateMonthlyPayment = (principal, annualRate, years) => {
+export const calculateMonthlyPayment = (
+  principal: number,
+  annualRate: number,
+  years: number
+): number => {
   const r = annualRate / 100 / 12; // Monthly interest rate
   const n = years * 12; // Total number of payments
   const M = principal * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
@@ -34,10 +38,10 @@ export const calculateMonthlyPayment = (principal, annualRate, years) => {
 
 /**
  * Format years display with half year symbol
- * @param {number} value - Years value
- * @returns {string} Formatted years string
+ * @param value - Years value
+ * @returns Formatted years string
  */
-export const formatYears = (value) => {
+export const formatYears = (value: number): string => {
   if (value % 1 === 0.5) {
     return `${Math.floor(value)} ½`;
   }
@@ -46,11 +50,13 @@ export const formatYears = (value) => {
 
 /**
  * Format currency value
- * @param {number} value - Numeric value
- * @param {number} decimals - Number of decimal places
- * @returns {string} Formatted currency string
+ * @param value - Numeric value
+ * @param decimals - Number of decimal places (default: 2)
+ * @returns Formatted currency string
  */
-export const formatCurrency = (value, decimals = CURRENCY.DECIMAL_PLACES) => {
+export const formatCurrency = (
+  value: number,
+  decimals: number = CURRENCY.DECIMAL_PLACES
+): string => {
   return `${CURRENCY.SYMBOL}${value.toFixed(decimals)}`;
 };
-

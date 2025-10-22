@@ -8,7 +8,11 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { LABELS } from '../constants';
 import { buttonStyles } from '../styles/theme';
 
-const ActionButton = ({ onPress }) => {
+interface ActionButtonProps {
+  onPress: () => void;
+}
+
+const ActionButton: React.FC<ActionButtonProps> = ({ onPress }) => {
   return (
     <View style={buttonStyles.container}>
       <TouchableOpacity style={buttonStyles.button} onPress={onPress}>
@@ -19,4 +23,3 @@ const ActionButton = ({ onPress }) => {
 };
 
 export default ActionButton;
-

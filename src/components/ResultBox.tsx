@@ -9,7 +9,12 @@ import { LABELS } from '../constants';
 import { formatCurrency } from '../utils/calculations';
 import { resultBoxStyles } from '../styles/theme';
 
-const ResultBox = ({ interestRate, monthlyPayment }) => {
+interface ResultBoxProps {
+  interestRate: number;
+  monthlyPayment: number;
+}
+
+const ResultBox: React.FC<ResultBoxProps> = ({ interestRate, monthlyPayment }) => {
   return (
     <View style={resultBoxStyles.container}>
       <View style={resultBoxStyles.resultItem}>
@@ -30,4 +35,3 @@ const ResultBox = ({ interestRate, monthlyPayment }) => {
 };
 
 export default ResultBox;
-

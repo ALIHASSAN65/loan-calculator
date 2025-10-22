@@ -10,7 +10,12 @@ import { LABELS, SLIDER_CONFIG, COLORS, SLIDER_STYLE } from '../constants';
 import { formatCurrency } from '../utils/calculations';
 import { commonStyles } from '../styles/theme';
 
-const AmountSlider = ({ value, onValueChange }) => {
+interface AmountSliderProps {
+  value: number;
+  onValueChange: (value: number) => void;
+}
+
+const AmountSlider: React.FC<AmountSliderProps> = ({ value, onValueChange }) => {
   return (
     <>
       <View style={commonStyles.row}>
@@ -39,4 +44,3 @@ const AmountSlider = ({ value, onValueChange }) => {
 };
 
 export default AmountSlider;
-

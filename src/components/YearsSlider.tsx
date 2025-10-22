@@ -10,9 +10,14 @@ import { LABELS, SLIDER_CONFIG, COLORS, SLIDER_STYLE } from '../constants';
 import { formatYears } from '../utils/calculations';
 import { commonStyles } from '../styles/theme';
 
-const YearsSlider = ({ value, onValueChange }) => {
+interface YearsSliderProps {
+  value: number;
+  onValueChange: (value: number) => void;
+}
+
+const YearsSlider: React.FC<YearsSliderProps> = ({ value, onValueChange }) => {
   // Render intermediate ticks for visual guidance
-  const renderTicks = (steps) => (
+  const renderTicks = (steps: number) => (
     Array.from({ length: steps }, (_, i) => (
       <View key={i} style={commonStyles.tick} />
     ))
@@ -55,4 +60,3 @@ const YearsSlider = ({ value, onValueChange }) => {
 };
 
 export default YearsSlider;
-
