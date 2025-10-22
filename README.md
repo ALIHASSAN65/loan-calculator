@@ -8,12 +8,13 @@ A React Native loan calculator application that calculates monthly repayments wi
 
 <div align="center">
   <img src="./screenshots/ios.png" alt="iOS Screenshot" width="300" />
-  <img src="./screenshots/android.png" alt="Android Screenshot" width="300" />
+  <p><em>iOS Version</em></p>
 </div>
 
-<p align="center">
-  <em>iOS (left) and Android (right) versions of the Loan Calculator</em>
-</p>
+<div align="center">
+  <img src="./screenshots/android.png" alt="Android Screenshot" width="300" />
+  <p><em>Android Version</em></p>
+</div>
 
 ---
 
