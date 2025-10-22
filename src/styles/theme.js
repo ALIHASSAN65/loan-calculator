@@ -27,11 +27,16 @@ export const commonStyles = StyleSheet.create({
   card: {
     width: LAYOUT.CARD_WIDTH,
     alignItems: 'center',
+    // iOS shadow
     shadowColor: COLORS.BLACK,
     shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 6,
-    elevation: 4,
+    // Android shadow
+    elevation: 8,
+    backgroundColor: COLORS.WHITE, // Required for Android elevation
+    borderRadius:7,
+   
   },
   cardContent: {
     backgroundColor: COLORS.WHITE,
@@ -112,6 +117,8 @@ export const resultBoxStyles = StyleSheet.create({
     borderBottomLeftRadius: 7,
     borderBottomRightRadius: 7,
     overflow: 'hidden',
+    // Android shadow
+    elevation: 8,
   },
   resultItem: {
     flex: 1,

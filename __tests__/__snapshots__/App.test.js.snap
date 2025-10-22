@@ -50,7 +50,10 @@ exports[`Loan Calculator App - Integration Tests Snapshot Testing matches snapsh
         style={
           {
             "alignItems": "center",
-            "elevation": 4,
+            "backgroundColor": "#fff",
+            "borderTopLeftRadius": 7,
+            "borderTopRightRadius": 7,
+            "elevation": 8,
             "shadowColor": "#000",
             "shadowOffset": {
               "height": 3,
@@ -274,6 +277,7 @@ exports[`Loan Calculator App - Integration Tests Snapshot Testing matches snapsh
               "backgroundColor": "#eee",
               "borderBottomLeftRadius": 7,
               "borderBottomRightRadius": 7,
+              "elevation": 8,
               "flexDirection": "row",
               "overflow": "hidden",
               "paddingBottom": 20,
