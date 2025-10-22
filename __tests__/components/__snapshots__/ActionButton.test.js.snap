@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionButton Component Visual Structure renders as a valid React Native component tree 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1.5,
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#f60367",
+        "borderRadius": 5,
+        "height": 65,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": "85%",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#fff",
+          "fontFamily": "OpenSans-Regular",
+          "fontSize": 15,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Get your quote »
+    </Text>
+  </View>
+</View>
+`;
