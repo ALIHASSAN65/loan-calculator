@@ -4,51 +4,43 @@ A React Native loan calculator application that calculates monthly repayments wi
 
 ---
 
-## Screenshots
+## Demo
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="./demos/ios.png" alt="iOS Screenshot" width="300" />
-        <br />
-        <em>iOS Version</em>
-      </td>
-      <td align="center">
-        <img src="./demos/android.png" alt="Android Screenshot" width="300" />
-        <br />
-        <em>Android Version</em>
-      </td>
-    </tr>
-  </table>
-</div>
+### iOS Version
 
-## Demo Videos
-
-### iOS Demo
-
-
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="./demos/ios.png" alt="iOS Screenshot" width="100%" />
+      <br />
+      <em>Screenshot</em>
+    </td>
+    <td width="50%" align="center">
 
 https://github.com/user-attachments/assets/f4fecbac-ff58-40cf-ac4f-8eaeb4b42ebe
 
+<em>Video Demo</em>
+    </td>
+  </tr>
+</table>
 
+### Android Version
 
-### Android Demo  
-
-
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="./demos/android.png" alt="Android Screenshot" width="100%" />
+      <br />
+      <em>Screenshot</em>
+    </td>
+    <td width="50%" align="center">
 
 https://github.com/user-attachments/assets/ba13c85a-5350-442c-8f3f-19d27ee16219
 
-
-
-> **📹 How to add playable videos above:**
-> 1. Edit this README directly on GitHub.com (click the pencil icon)
-> 2. Delete the placeholder URLs above (the `https://github.com/user-attachments/assets/...` lines)
-> 3. Drag and drop your `demos/ios.mp4` and `demos/android.mp4` files directly into the editor where you deleted the URLs
-> 4. GitHub will upload them and insert working video player URLs automatically
-> 5. Commit the changes
->
-> Alternatively, download the videos here: [`ios.mp4`](./demos/ios.mp4) | [`android.mp4`](./demos/android.mp4)
+<em>Video Demo</em>
+    </td>
+  </tr>
+</table>
 
 ---
 
