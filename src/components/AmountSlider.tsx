@@ -33,11 +33,7 @@ const AmountSlider: React.FC<AmountSliderProps> = ({ value, onValueChange }) => 
         minimumTrackTintColor={COLORS.SLIDER_TRACK}
         maximumTrackTintColor={COLORS.SLIDER_TRACK}
         thumbTintColor={COLORS.PRIMARY}
-        thumbStyle={{
-          height: SLIDER_STYLE.THUMB.HEIGHT,
-          width: SLIDER_STYLE.THUMB.WIDTH,
-          borderRadius: SLIDER_STYLE.THUMB.BORDER_RADIUS,
-        }}
+        thumbStyle={commonStyles.sliderThumb}
       />
     </>
   );

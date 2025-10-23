@@ -54,6 +54,11 @@ export const commonStyles = StyleSheet.create({
     fontSize: FONTS.SIZES.REGULAR,
     fontFamily: FONTS.FAMILY,
     fontWeight: FONTS.WEIGHTS.REGULAR,
+    marginBottom: 4, // Raises label text slightly above value text
+  },
+  labelTextWithSpacing: {
+    marginBottom: 4,
+    marginRight: 10,
   },
   valueText: {
     color: COLORS.MEDIUM_GRAY,
@@ -67,6 +72,11 @@ export const commonStyles = StyleSheet.create({
     width: LAYOUT.SLIDER_WIDTH,
     alignSelf: 'center',
     zIndex: 1,
+  },
+  sliderThumb: {
+    height: SLIDER_STYLE.THUMB.HEIGHT,
+    width: SLIDER_STYLE.THUMB.WIDTH,
+    borderRadius: SLIDER_STYLE.THUMB.BORDER_RADIUS,
   },
   sliderWrapper: {
     width: '100%',

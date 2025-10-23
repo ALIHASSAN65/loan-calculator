@@ -26,7 +26,7 @@ const YearsSlider: React.FC<YearsSliderProps> = ({ value, onValueChange }) => {
   return (
     <>
       <View style={commonStyles.rowCentered}>
-        <Text style={[commonStyles.labelText, { marginRight: 10 }]}>
+        <Text style={[commonStyles.labelText,commonStyles.labelTextWithSpacing]}>
           {LABELS.YEARS_PREFIX}
         </Text>
         <Text style={commonStyles.valueText}>
@@ -48,11 +48,7 @@ const YearsSlider: React.FC<YearsSliderProps> = ({ value, onValueChange }) => {
           minimumTrackTintColor={COLORS.SLIDER_TRACK}
           maximumTrackTintColor={COLORS.SLIDER_TRACK}
           thumbTintColor={COLORS.PRIMARY}
-          thumbStyle={{
-            height: SLIDER_STYLE.THUMB.HEIGHT,
-            width: SLIDER_STYLE.THUMB.WIDTH,
-            borderRadius: SLIDER_STYLE.THUMB.BORDER_RADIUS,
-          }}
+          thumbStyle={commonStyles.sliderThumb}
         />
       </View>
     </>
