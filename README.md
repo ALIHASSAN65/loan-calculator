@@ -23,7 +23,24 @@ A React Native loan calculator application that calculates monthly repayments wi
   </table>
 </div>
 
-> 📹 **Demo Videos:** See [`demos/ios.mp4`](./demos/ios.mp4) and [`demos/android.mp4`](./demos/android.mp4) for full video demonstrations.
+## Demo Videos
+
+### iOS Demo
+
+https://github.com/user-attachments/assets/your-ios-video.mp4
+
+### Android Demo  
+
+https://github.com/user-attachments/assets/your-android-video.mp4
+
+> **📹 How to add playable videos above:**
+> 1. Edit this README directly on GitHub.com (click the pencil icon)
+> 2. Delete the placeholder URLs above (the `https://github.com/user-attachments/assets/...` lines)
+> 3. Drag and drop your `demos/ios.mp4` and `demos/android.mp4` files directly into the editor where you deleted the URLs
+> 4. GitHub will upload them and insert working video player URLs automatically
+> 5. Commit the changes
+>
+> Alternatively, download the videos here: [`ios.mp4`](./demos/ios.mp4) | [`android.mp4`](./demos/android.mp4)
 
 ---
 
