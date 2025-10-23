@@ -47,7 +47,7 @@ https://github.com/user-attachments/assets/ba13c85a-5350-442c-8f3f-19d27ee16219
 ## Features
 
 - **Loan Amount Slider**: £1,000 - £20,000 in £100 increments
-- **Loan Term Slider**: 1 - 5 years in 6-month steps (displays decimal format: 2.5 years)
+- **Loan Term Slider**: 1 - 5 years in 6-month steps (displays fractions: 2 ½ years)
 - **Dynamic Interest Rates**: Automatically adjusts based on loan amount tier
 - **Monthly Repayment Calculation**: Uses standard amortization formula
 - **Real-time Updates**: Instant calculation as sliders change

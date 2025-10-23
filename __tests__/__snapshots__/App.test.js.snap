@@ -162,6 +162,7 @@ exports[`Loan Calculator App - Integration Tests Snapshot Testing matches snapsh
                     "marginBottom": 4,
                   },
                   {
+                    "marginBottom": 4,
                     "marginRight": 10,
                   },
                 ]
@@ -179,7 +180,7 @@ exports[`Loan Calculator App - Integration Tests Snapshot Testing matches snapsh
                 }
               }
             >
-              2.5
+              2 ½
                years
             </Text>
           </View>

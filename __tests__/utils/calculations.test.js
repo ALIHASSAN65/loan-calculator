@@ -131,16 +131,16 @@ describe('formatYears', () => {
     expect(formatYears(5)).toBe('5');
   });
 
-  test('formats decimal values correctly', () => {
-    expect(formatYears(1.5)).toBe('1.5');
-    expect(formatYears(2.5)).toBe('2.5');
-    expect(formatYears(3.5)).toBe('3.5');
-    expect(formatYears(4.5)).toBe('4.5');
+  test('formats half-year values with fraction symbol', () => {
+    expect(formatYears(1.5)).toBe('1 ½');
+    expect(formatYears(2.5)).toBe('2 ½');
+    expect(formatYears(3.5)).toBe('3 ½');
+    expect(formatYears(4.5)).toBe('4 ½');
   });
 
   test('handles edge cases', () => {
     expect(formatYears(0)).toBe('0');
-    expect(formatYears(0.5)).toBe('0.5');
+    expect(formatYears(0.5)).toBe('0 ½');
   });
 });
 

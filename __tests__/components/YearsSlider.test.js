@@ -35,7 +35,7 @@ describe('YearsSlider Component', () => {
 
     test('displays formatted years value', () => {
       render(<YearsSlider value={2.5} onValueChange={mockOnValueChange} />);
-      expect(screen.getByText(/2.5/)).toBeTruthy();
+      expect(screen.getByText(/2 ½/)).toBeTruthy();
     });
   });
 
@@ -73,27 +73,27 @@ describe('YearsSlider Component', () => {
       expect(screen.getByText(/5/)).toBeTruthy();
     });
 
-    test('displays half-year values in decimal format', () => {
+    test('displays half-year values with fraction symbol', () => {
       const { rerender } = render(
         <YearsSlider value={1.5} onValueChange={mockOnValueChange} />
       );
-      expect(screen.getByText(/1.5/)).toBeTruthy();
+      expect(screen.getByText(/1 ½/)).toBeTruthy();
 
       rerender(<YearsSlider value={2.5} onValueChange={mockOnValueChange} />);
-      expect(screen.getByText(/2.5/)).toBeTruthy();
+      expect(screen.getByText(/2 ½/)).toBeTruthy();
 
       rerender(<YearsSlider value={3.5} onValueChange={mockOnValueChange} />);
-      expect(screen.getByText(/3.5/)).toBeTruthy();
+      expect(screen.getByText(/3 ½/)).toBeTruthy();
 
       rerender(<YearsSlider value={4.5} onValueChange={mockOnValueChange} />);
-      expect(screen.getByText(/4.5/)).toBeTruthy();
+      expect(screen.getByText(/4 ½/)).toBeTruthy();
     });
   });
 
   describe('Component Props', () => {
     test('accepts and uses value prop', () => {
       render(<YearsSlider value={3.5} onValueChange={mockOnValueChange} />);
-      expect(screen.getByText(/3.5/)).toBeTruthy();
+      expect(screen.getByText(/3 ½/)).toBeTruthy();
     });
 
     test('accepts onValueChange callback prop', () => {

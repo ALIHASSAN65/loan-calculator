@@ -33,7 +33,7 @@ describe('Loan Calculator App - Integration Tests', () => {
 
     test('displays default loan term (2.5 years)', () => {
       render(<App />);
-      expect(screen.getByText(/2.5/)).toBeTruthy();
+      expect(screen.getByText(/2 ½/)).toBeTruthy();
       expect(screen.getByText(/years/)).toBeTruthy();
     });
 
@@ -110,7 +110,7 @@ describe('Loan Calculator App - Integration Tests', () => {
       render(<App />);
       
       // Check that years slider displays the default years
-      expect(screen.getByText(/2.5/)).toBeTruthy();
+      expect(screen.getByText(/2 ½/)).toBeTruthy();
       expect(screen.getByText(/over/)).toBeTruthy();
     });
 
@@ -155,7 +155,7 @@ describe('Loan Calculator App - Integration Tests', () => {
       
       // Verify all parts of the calculation
       expect(screen.getByText('£7500.00')).toBeTruthy(); // Amount
-      expect(screen.getByText(/2.5/)).toBeTruthy();      // Years
+      expect(screen.getByText(/2 ½/)).toBeTruthy();      // Years
       expect(screen.getByText(/10/)).toBeTruthy();       // Interest rate (10%)
       expect(screen.getByText(/£283\./)).toBeTruthy();   // Monthly payment
     });
@@ -167,7 +167,7 @@ describe('Loan Calculator App - Integration Tests', () => {
       
       // All default values should be present
       expect(screen.getByText('£7500.00')).toBeTruthy();
-      expect(screen.getByText(/2.5/)).toBeTruthy();
+      expect(screen.getByText(/2 ½/)).toBeTruthy();
       expect(screen.getByText(/10/)).toBeTruthy();
       expect(screen.getByText(/£283\./)).toBeTruthy();
     });
@@ -189,7 +189,7 @@ describe('Loan Calculator App - Integration Tests', () => {
 
     test('years flows from state to YearsSlider to display', () => {
       render(<App />);
-      expect(screen.getByText(/2.5/)).toBeTruthy();
+      expect(screen.getByText(/2 ½/)).toBeTruthy();
     });
 
     test('interest rate flows from calculation to ResultBox', () => {

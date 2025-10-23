@@ -37,11 +37,14 @@ export const calculateMonthlyPayment = (
 };
 
 /**
- * Format years display in decimal format
+ * Format years display with half year symbol
  * @param value - Years value
  * @returns Formatted years string
  */
 export const formatYears = (value: number): string => {
+  if (value % 1 === 0.5) {
+    return `${Math.floor(value)} ½`;
+  }
   return value.toString();
 };
 
