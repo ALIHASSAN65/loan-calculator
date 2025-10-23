@@ -23,7 +23,7 @@ A React Native loan calculator application that calculates monthly repayments wi
   </table>
 </div>
 
-> 📹 **Demo Videos:** See [`demos/ios.mp4`](./demos/ios.mov) and [`demos/android.mp4`](./demos/android.mov) for full video demonstrations.
+> 📹 **Demo Videos:** See [`demos/ios.mp4`](./demos/ios.mp4) and [`demos/android.mp4`](./demos/android.mp4) for full video demonstrations.
 
 ---
 
