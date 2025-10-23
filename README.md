@@ -17,7 +17,8 @@ A React Native loan calculator application that calculates monthly repayments wi
     </td>
     <td width="50%" align="center">
 
-https://github.com/user-attachments/assets/f4fecbac-ff58-40cf-ac4f-8eaeb4b42ebe
+
+https://github.com/user-attachments/assets/3baa5385-f704-445b-9715-23e29944936e
 
 <em>Video Demo</em>
     </td>
@@ -35,7 +36,8 @@ https://github.com/user-attachments/assets/f4fecbac-ff58-40cf-ac4f-8eaeb4b42ebe
     </td>
     <td width="50%" align="center">
 
-https://github.com/user-attachments/assets/ba13c85a-5350-442c-8f3f-19d27ee16219
+https://github.com/user-attachments/assets/0bbce546-4320-4130-81ba-72209c8b4150
+
 
 <em>Video Demo</em>
     </td>
