@@ -1,4 +1,4 @@
-# Lendable Loan Calculator
+# Loan Calculator
 
 A React Native loan calculator application that calculates monthly repayments with dynamic interest rates based on loan amount. Built with TypeScript for type safety and comprehensive test coverage.
 
