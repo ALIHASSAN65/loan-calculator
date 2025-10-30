@@ -1,0 +1,428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loan Calculator App - Integration Tests Snapshot Testing matches snapshot for default state 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#000",
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "flex": 8.5,
+        "width": "100%",
+      }
+    }
+  >
+    <LinearGradient
+      colors={
+        [
+          "#f60367",
+          "#383b7e",
+        ]
+      }
+      end={
+        {
+          "x": 1,
+          "y": 0,
+        }
+      }
+      start={
+        {
+          "x": 0,
+          "y": 1,
+        }
+      }
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 7,
+            "elevation": 8,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 6,
+            "width": "85%",
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "#fff",
+              "borderTopLeftRadius": 7,
+              "borderTopRightRadius": 7,
+              "overflow": "hidden",
+              "padding": 30,
+              "paddingBottom": 15,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "flex-end",
+                "alignSelf": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "marginBottom": 15,
+                "width": "90%",
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#000",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 15,
+                  "fontWeight": "400",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              I want to borrow 
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#999",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 25,
+                  "fontWeight": "300",
+                }
+              }
+            >
+              £7500.00
+            </Text>
+          </View>
+          <View
+            maximumTrackTintColor="#F5D5E1"
+            maximumValue={20000}
+            minimumTrackTintColor="#F5D5E1"
+            minimumValue={1000}
+            onValueChange={[Function]}
+            step={100}
+            style={
+              {
+                "alignSelf": "center",
+                "width": "90%",
+                "zIndex": 1,
+              }
+            }
+            thumbStyle={
+              {
+                "borderRadius": 30,
+                "height": 30,
+                "width": 30,
+              }
+            }
+            thumbTintColor="#f60367"
+            value={7500}
+          />
+          <View
+            style={
+              {
+                "alignItems": "flex-end",
+                "alignSelf": "center",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "margin": 10,
+                "width": "90%",
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "color": "#000",
+                    "fontFamily": "OpenSans-Regular",
+                    "fontSize": 15,
+                    "fontWeight": "400",
+                    "marginBottom": 4,
+                  },
+                  {
+                    "marginBottom": 4,
+                    "marginRight": 10,
+                  },
+                ]
+              }
+            >
+              over 
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#999",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 25,
+                  "fontWeight": "300",
+                }
+              }
+            >
+              2 ½
+               years
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "position": "relative",
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "position": "absolute",
+                  "top": 12,
+                  "width": "60%",
+                  "zIndex": 0,
+                }
+              }
+            >
+              <View
+                style={
+                  {
+                    "backgroundColor": "#F5D5E1",
+                    "borderRadius": 2,
+                    "height": 15,
+                    "width": 5,
+                  }
+                }
+              />
+              <View
+                style={
+                  {
+                    "backgroundColor": "#F5D5E1",
+                    "borderRadius": 2,
+                    "height": 15,
+                    "width": 5,
+                  }
+                }
+              />
+              <View
+                style={
+                  {
+                    "backgroundColor": "#F5D5E1",
+                    "borderRadius": 2,
+                    "height": 15,
+                    "width": 5,
+                  }
+                }
+              />
+              <View
+                style={
+                  {
+                    "backgroundColor": "#F5D5E1",
+                    "borderRadius": 2,
+                    "height": 15,
+                    "width": 5,
+                  }
+                }
+              />
+            </View>
+            <View
+              maximumTrackTintColor="#F5D5E1"
+              maximumValue={5}
+              minimumTrackTintColor="#F5D5E1"
+              minimumValue={1}
+              onValueChange={[Function]}
+              step={0.5}
+              style={
+                {
+                  "alignSelf": "center",
+                  "width": "90%",
+                  "zIndex": 1,
+                }
+              }
+              thumbStyle={
+                {
+                  "borderRadius": 30,
+                  "height": 30,
+                  "width": 30,
+                }
+              }
+              thumbTintColor="#f60367"
+              value={2.5}
+            />
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#eee",
+              "borderBottomLeftRadius": 7,
+              "borderBottomRightRadius": 7,
+              "elevation": 8,
+              "flexDirection": "row",
+              "overflow": "hidden",
+              "paddingBottom": 20,
+              "paddingTop": 23,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#999",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 35,
+                  "fontWeight": "300",
+                }
+              }
+            >
+              10
+              %
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#000",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 11,
+                  "fontWeight": "400",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Interest rate
+            </Text>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "color": "#999",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 35,
+                  "fontWeight": "300",
+                }
+              }
+            >
+              £283.59
+            </Text>
+            <Text
+              style={
+                {
+                  "color": "#000",
+                  "fontFamily": "OpenSans-Regular",
+                  "fontSize": 11,
+                  "fontWeight": "400",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Monthly repayment
+            </Text>
+          </View>
+        </View>
+      </View>
+    </LinearGradient>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1.5,
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#f60367",
+          "borderRadius": 5,
+          "height": 65,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": "85%",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#fff",
+            "fontFamily": "OpenSans-Regular",
+            "fontSize": 15,
+            "fontWeight": "600",
+          }
+        }
+      >
+        Get your quote »
+      </Text>
+    </View>
+  </View>
+</View>
+`;
