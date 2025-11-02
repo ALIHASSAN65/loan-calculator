@@ -8,7 +8,7 @@ import {
   calculateInterestRate,
   formatYears,
   formatCurrency,
-} from '../../src/utils/calculations';
+} from './calculations';
 
 describe('calculateInterestRate', () => {
   describe('returns correct rate for each tier', () => {
@@ -172,3 +172,5 @@ describe('formatCurrency', () => {
     expect(formatCurrency(999999.99)).toBe('£999999.99');
   });
 });
+
+
