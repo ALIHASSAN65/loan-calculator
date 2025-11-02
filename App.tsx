@@ -3,7 +3,7 @@
  * Main application component for calculating loan repayments
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -30,16 +30,10 @@ const LoanCalculator: React.FC = () => {
   // State management
   const [amount, setAmount] = useState<number>(SLIDER_CONFIG.AMOUNT.DEFAULT);
   const [years, setYears] = useState<number>(SLIDER_CONFIG.YEARS.DEFAULT);
-  const [monthlyPayment, setMonthlyPayment] = useState<number>(0);
 
-  // Calculate interest rate based on amount
+  // Calculate derived values
   const interestRate = calculateInterestRate(amount);
-
-  // Calculate monthly repayment whenever amount or years changes
-  useEffect(() => {
-    const payment = calculateMonthlyPayment(amount, interestRate, years);
-    setMonthlyPayment(payment);
-  }, [amount, years, interestRate]);
+  const monthlyPayment = calculateMonthlyPayment(amount, interestRate, years);
 
   // Handler for getting a quote
   const handleGetQuote = (): void => {

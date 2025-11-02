@@ -143,35 +143,26 @@ yarn test -- --coverage
 ## Project Structure
 
 ```
-lenablecalculator/
-├── App.tsx                    # Main app component (TypeScript)
+loan-calculator/
+├── App.tsx                          # Main app with derived state
+├── App.test.tsx                     # Comprehensive integration tests
 ├── src/
-│   ├── components/            # UI components (TypeScript)
-│   │   ├── AmountSlider.tsx   # Loan amount selector
-│   │   ├── YearsSlider.tsx    # Loan term selector
-│   │   ├── ResultBox.tsx      # Results display
-│   │   ├── ActionButton.tsx   # CTA button
-│   │   └── index.js           # Component exports
-│   ├── constants/
-│   │   └── index.ts           # App constants (TypeScript with interfaces)
-│   ├── utils/
-│   │   └── calculations.ts    # Loan calculations (TypeScript)
-│   ├── styles/
-│   │   └── theme.js           # Centralized styling
-│   └── assets/
-│       └── fonts/             # OpenSans font family
-├── __tests__/
 │   ├── components/
-│   │   ├── AmountSlider.test.js    # 14 tests
-│   │   ├── YearsSlider.test.js     # 14 tests
-│   │   ├── ResultBox.test.js       # 20 tests
-│   │   └── ActionButton.test.js    # 8 tests
-│   ├── utils/
-│   │   └── calculations.test.js    # 21 tests
-│   └── App.test.js                 # 21 integration tests
-├── jest.config.js             # Jest configuration
-├── jest.setup.js              # Test setup and mocks
-└── tsconfig.json              # TypeScript configuration
+│   │   ├── AmountSlider.tsx
+│   │   ├── AmountSlider.test.tsx    # ✅ Colocated
+│   │   ├── YearsSlider.tsx
+│   │   ├── YearsSlider.test.tsx     # ✅ Colocated
+│   │   ├── ResultBox.tsx
+│   │   ├── ResultBox.test.tsx       # ✅ Colocated
+│   │   ├── ActionButton.tsx
+│   │   ├── ActionButton.test.tsx    # ✅ Colocated
+│   │   └── __snapshots__/
+│   └── utils/
+│       ├── calculations.ts
+│       └── calculations.test.ts     # ✅ Colocated
+└── __snapshots__/
+    └── App.test.tsx.snap
+
 ```
 
 ---

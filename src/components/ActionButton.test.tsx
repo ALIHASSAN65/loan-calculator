@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
-import ActionButton from '../../src/components/ActionButton';
+import ActionButton from './ActionButton';
 
 describe('ActionButton Component', () => {
   const mockOnPress = jest.fn();
@@ -113,4 +113,5 @@ describe('ActionButton Component', () => {
     });
   });
 });
+
 

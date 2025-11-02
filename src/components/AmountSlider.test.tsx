@@ -5,8 +5,8 @@
 
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
-import AmountSlider from '../../src/components/AmountSlider';
-import { SLIDER_CONFIG } from '../../src/constants';
+import AmountSlider from './AmountSlider';
+import { SLIDER_CONFIG } from '../constants';
 
 describe('AmountSlider Component', () => {
   const mockOnValueChange = jest.fn();
@@ -101,4 +101,5 @@ describe('AmountSlider Component', () => {
     });
   });
 });
+
 

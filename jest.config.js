@@ -4,11 +4,17 @@ module.exports = {
   transformIgnorePatterns: [
     'node_modules/(?!(react-native|@react-native|react-native-linear-gradient|react-native-sliders)/)',
   ],
+  testMatch: [
+    '**/__tests__/**/*.test.{js,jsx,ts,tsx}',
+    '**/*.test.{js,jsx,ts,tsx}',
+    '**/*.spec.{js,jsx,ts,tsx}',
+  ],
   collectCoverage: false, // Set to true when running with --coverage flag
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     'App.tsx',
     '!src/**/*.d.ts',
+    '!src/**/*.test.{js,jsx,ts,tsx}',
     '!src/assets/**',
     '!**/node_modules/**',
     '!**/vendor/**',

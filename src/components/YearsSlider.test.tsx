@@ -5,8 +5,8 @@
 
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
-import YearsSlider from '../../src/components/YearsSlider';
-import { SLIDER_CONFIG } from '../../src/constants';
+import YearsSlider from './YearsSlider';
+import { SLIDER_CONFIG } from '../constants';
 
 describe('YearsSlider Component', () => {
   const mockOnValueChange = jest.fn();
@@ -114,4 +114,5 @@ describe('YearsSlider Component', () => {
     });
   });
 });
+
 

@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
-import ResultBox from '../../src/components/ResultBox';
+import ResultBox from './ResultBox';
 
 describe('ResultBox Component', () => {
   describe('Rendering', () => {
@@ -144,4 +144,5 @@ describe('ResultBox Component', () => {
     });
   });
 });
+
 
